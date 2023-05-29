@@ -4,6 +4,7 @@
 #include "deque.h"
 #include "list.h"
 #include "set.h"
+#include "map.h"
 
 #include "condition.h"
 
@@ -17,6 +18,7 @@ int main() {
   TestDeque();
   TestList();
   TestSet();
+  TestMap();
 
   return 0;
 }
