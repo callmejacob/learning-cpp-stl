@@ -5,6 +5,7 @@
 #include "list.h"
 #include "set.h"
 #include "map.h"
+#include "multiset.h"
 
 #include "condition.h"
 
@@ -19,6 +20,7 @@ int main() {
   TestList();
   TestSet();
   TestMap();
+  TestMultiSet();
 
   return 0;
 }
