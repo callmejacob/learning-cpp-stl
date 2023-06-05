@@ -9,6 +9,8 @@
 
 #include "condition.h"
 
+#include "iterator.h"
+
 int main() {
   TestQsort();
   TestSearch();
@@ -21,6 +23,8 @@ int main() {
   TestSet();
   TestMap();
   TestMultiSet();
+
+  TestIterator();
 
   return 0;
 }
