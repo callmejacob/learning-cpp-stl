@@ -25,4 +25,6 @@ void TestStr64() {
 
   cout << "time str:" << convertInt64ToString(current_time_v) << endl;
   cout << "time v:" << convertStringToInt64(current_time_s) << endl;
+
+  cout << "time exception v: " << convertStringToInt64("abc") << endl;
 }
