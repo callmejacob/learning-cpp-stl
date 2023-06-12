@@ -126,6 +126,29 @@ void TestIterator_5() {
   cout << "[iterator] 5 end." << endl;
 }
 
+static void TestIterator_6() {
+  cout << "[iterator] 6 begin." << endl;
+
+  vector<int> v = {1, 2};
+  v.push_back(3);
+  v.push_back(4);
+  v.push_back(5);
+
+  vector<int>::iterator x = v.begin();
+  vector<int>::iterator y = v.begin() + 2;
+  x += 1;
+  cout << "x:" << *x << ", y:" << *y << endl;
+
+  x++;
+  ++y;
+  y -= 2;
+  cout << "x:" << *x << ", y:" << *y << endl;
+
+  (y < x) ? (cout << "y < x" << endl) : (cout << "not y < x" << endl);
+
+  cout << "[iterator] 6 end." << endl;
+}
+
 void TestIterator() {
   const char *good[] = {"program", "argc_1", "argc_2", "argc_3"};
   TestIterator_1(4, good);
@@ -138,4 +161,5 @@ void TestIterator() {
 
   TestIterator_4();
   TestIterator_5();
+  TestIterator_6();
 }

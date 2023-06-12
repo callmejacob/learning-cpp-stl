@@ -13,6 +13,9 @@ static string convertInt64ToString(::int64_t v) {
 }
 
 static ::int64_t convertStringToInt64(std::string s) {
+  if (s.empty()) {
+    return 0;
+  }
   std::istringstream is(s);
   ::int64_t v;
   is >> v;
@@ -26,5 +29,5 @@ void TestStr64() {
   cout << "time str:" << convertInt64ToString(current_time_v) << endl;
   cout << "time v:" << convertStringToInt64(current_time_s) << endl;
 
-  cout << "time exception v: " << convertStringToInt64("abc") << endl;
+  cout << "time exception v: " << convertStringToInt64("") << endl;
 }
