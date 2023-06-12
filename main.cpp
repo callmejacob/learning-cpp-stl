@@ -11,6 +11,8 @@
 
 #include "iterator.h"
 
+#include "str64.h"
+
 int main() {
   TestQsort();
   TestSearch();
@@ -25,6 +27,8 @@ int main() {
   TestMultiSet();
 
   TestIterator();
+
+  TestStr64();
 
   return 0;
 }
