@@ -5,6 +5,7 @@
 #include "algorithm/fill.h"
 #include "algorithm/replace.h"
 #include "algorithm/remove.h"
+#include "algorithm/transform.h"
 #include "container/vector.h"
 #include "container/deque.h"
 #include "container/list.h"
@@ -35,6 +36,7 @@ int main() {
   TestFill();
   TestReplace();
   TestRemove();
+  TestTransform();
 
   return 0;
 }
