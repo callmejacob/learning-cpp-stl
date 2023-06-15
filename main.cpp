@@ -3,6 +3,7 @@
 #include "algorithm/qsort.h"
 #include "algorithm/search.h"
 #include "algorithm/fill.h"
+#include "algorithm/replace.h"
 #include "container/vector.h"
 #include "container/deque.h"
 #include "container/list.h"
@@ -31,6 +32,7 @@ int main() {
   TestFind();
   TestCopy();
   TestFill();
+  TestReplace();
 
   return 0;
 }
