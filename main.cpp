@@ -1,3 +1,4 @@
+#include "algorithm/copy.h"
 #include "algorithm/find.h"
 #include "algorithm/qsort.h"
 #include "algorithm/search.h"
@@ -27,6 +28,7 @@ int main() {
   TestQsort();
   TestSearch();
   TestFind();
+  TestCopy();
 
   return 0;
 }
