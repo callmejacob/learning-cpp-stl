@@ -4,6 +4,15 @@ project(good)
 
 set(CMAKE_CXX_STANDARD 11)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/container)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/iterator)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/algorithm)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/other)
+
+file(GLOB CONTAINER_FILES "${CMAKE_CURRENT_SOURCE_DIR}/container/*.cpp")
+file(GLOB ITERATOR_FILES "${CMAKE_CURRENT_SOURCE_DIR}/iterator/*.cpp")
+file(GLOB ALGORITHM_FILES "${CMAKE_CURRENT_SOURCE_DIR}/algorithm/*.cpp")
+file(GLOB OTHER_FILES "${CMAKE_CURRENT_SOURCE_DIR}/other/*.cpp")
 file(GLOB SRC_FILES "./*.cpp")
 
-add_executable(main ${SRC_FILES})
+add_executable(main ${SRC_FILES} ${CONTAINER_FILES} ${ITERATOR_FILES} ${ALGORITHM_FILES} ${OTHER_FILES})
