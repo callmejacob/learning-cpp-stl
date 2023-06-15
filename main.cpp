@@ -2,6 +2,7 @@
 #include "algorithm/find.h"
 #include "algorithm/qsort.h"
 #include "algorithm/search.h"
+#include "algorithm/fill.h"
 #include "container/vector.h"
 #include "container/deque.h"
 #include "container/list.h"
@@ -29,6 +30,7 @@ int main() {
   TestSearch();
   TestFind();
   TestCopy();
+  TestFill();
 
   return 0;
 }
