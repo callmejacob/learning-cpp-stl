@@ -4,6 +4,7 @@
 #include "algorithm/search.h"
 #include "algorithm/fill.h"
 #include "algorithm/replace.h"
+#include "algorithm/remove.h"
 #include "container/vector.h"
 #include "container/deque.h"
 #include "container/list.h"
@@ -33,6 +34,7 @@ int main() {
   TestCopy();
   TestFill();
   TestReplace();
+  TestRemove();
 
   return 0;
 }
