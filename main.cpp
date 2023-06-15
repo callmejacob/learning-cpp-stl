@@ -1,3 +1,4 @@
+#include "algorithm/find.h"
 #include "algorithm/qsort.h"
 #include "algorithm/search.h"
 #include "container/vector.h"
@@ -6,18 +7,13 @@
 #include "container/set.h"
 #include "container/map.h"
 #include "container/multiset.h"
-
-#include "other/condition.h"
-
 #include "iterator/iterator.h"
-
+#include "other/condition.h"
 #include "other/str64.h"
 
 int main() {
-  TestQsort();
-  TestSearch();
-
   TestCondition();
+  TestStr64();
 
   TestVector();
   TestDeque();
@@ -28,7 +24,9 @@ int main() {
 
   TestIterator();
 
-  TestStr64();
+  TestQsort();
+  TestSearch();
+  TestFind();
 
   return 0;
 }
