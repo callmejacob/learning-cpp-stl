@@ -6,6 +6,7 @@
 #include "algorithm/replace.h"
 #include "algorithm/remove.h"
 #include "algorithm/transform.h"
+#include "algorithm/for_each.h"
 #include "container/vector.h"
 #include "container/deque.h"
 #include "container/list.h"
@@ -37,6 +38,7 @@ int main() {
   TestReplace();
   TestRemove();
   TestTransform();
+  TestForEach();
 
   return 0;
 }
