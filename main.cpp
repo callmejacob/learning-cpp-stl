@@ -16,6 +16,7 @@
 #include "iterator/iterator.h"
 #include "other/condition.h"
 #include "other/str64.h"
+#include "adapter/not.h"
 
 int main() {
   TestCondition();
@@ -39,6 +40,8 @@ int main() {
   TestRemove();
   TestTransform();
   TestForEach();
+
+  TestNot();
 
   return 0;
 }
