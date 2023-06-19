@@ -17,6 +17,7 @@
 #include "other/condition.h"
 #include "other/str64.h"
 #include "adapter/not.h"
+#include "adapter/mem_func_ref.h"
 
 int main() {
   TestCondition();
@@ -42,6 +43,7 @@ int main() {
   TestForEach();
 
   TestNot();
+  TestMemFunRef();
 
   return 0;
 }
