@@ -4,6 +4,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <unordered_map>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ struct print {
   }
 };
 
-void TestMap() {
+void TestNormalMap() {
   map<string, int> good_map;
 
   string src_tokens[] = {"good", "boy", "good", "girl", "good", "bad", "boy", "girl"};
@@ -25,4 +26,26 @@ void TestMap() {
   }
 
   for_each(good_map.begin(), good_map.end(), print());
+}
+
+void TestUnOrderMap() {
+  std::unordered_map<std::string, std::string> users;
+
+  users["a"] = "A";
+  users["b"] = "B";
+
+  auto it = users.find("a");
+  if (it != users.end()) {
+    cout << "[un_order_map] find it, " << it->second << endl;
+  }
+
+  it = users.find("c");
+  if (it == users.end()) {
+    cout << "[un_order_map] can't find it, " << "c" << endl;
+  }
+}
+
+void TestMap() {
+  TestNormalMap();
+  TestUnOrderMap();
 }
