@@ -32,6 +32,11 @@ public:
   string date;
 };
 
+ostream &operator<<(ostream &os, const MemoryRecord &item) {
+  os << item.id << " " << item.date;
+  return os;
+}
+
 void ParseFromFile(string input_file_name, map<int, MemoryRecord> &m) {
   ifstream ifs(input_file_name);
   if (!ifs.is_open()) {
@@ -46,7 +51,7 @@ void ParseFromFile(string input_file_name, map<int, MemoryRecord> &m) {
     ss >> record.id;
     ss >> record.date;
 
-//    cout << "get record, id:" << record.id << ", date:" << record.date << endl;
+//    cout << record << endl;
     m[record.id] = std::move(record);
   }
 }
@@ -97,7 +102,7 @@ int main(int argc, const char **argv) {
       auto destroy_time = destroy_item.date;
 
       auto diff = ConvertTimeStamp(destroy_time) - ConvertTimeStamp(create_time);
-      if (diff > 5 * 1000) {
+      if (diff > 500) {
         cout << "id:" << id << ", diff time:" << diff << "ms" << endl;
       }
     }
