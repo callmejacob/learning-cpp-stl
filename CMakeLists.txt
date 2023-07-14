@@ -21,5 +21,5 @@ file(GLOB SRC_FILES "./*.cpp")
 
 add_executable(main ${SRC_FILES} ${CONTAINER_FILES} ${ITERATOR_FILES} ${ALGORITHM_FILES} ${OTHER_FILES} ${ADAPTER_FILES})
 
-file(GLOB MEETING_FILES "${CMAKE_CURRENT_SOURCE_DIR}/meeting/*.cpp")
+file(GLOB MEETING_FILES "app/meeting/*.cpp")
 add_executable(meeting ${MEETING_FILES})
