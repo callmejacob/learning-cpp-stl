@@ -23,3 +23,7 @@ add_executable(main ${SRC_FILES} ${CONTAINER_FILES} ${ITERATOR_FILES} ${ALGORITH
 
 file(GLOB MEETING_FILES "app/meeting/*.cpp")
 add_executable(meeting ${MEETING_FILES})
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/app/memorycount)
+file(GLOB MEMORY_COUNT_FILES "app/memorycount/*.cpp")
+add_executable(memory_count ${MEMORY_COUNT_FILES})
