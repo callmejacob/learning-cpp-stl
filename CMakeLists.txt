@@ -27,3 +27,7 @@ add_executable(meeting ${MEETING_FILES})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/app/memorycount)
 file(GLOB MEMORY_COUNT_FILES "app/memorycount/*.cpp")
 add_executable(memory_count ${MEMORY_COUNT_FILES})
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/app/memory_check)
+file(GLOB MEMORY_COUNT_FILES "app/memory_check/*.cpp")
+add_executable(memory_check ${MEMORY_COUNT_FILES})
