@@ -30,3 +30,14 @@ public:
 
   virtual int ObjectSize() { return sizeof(T); }
 };
+
+class CheckMemoryInfo {
+public:
+  static void Insert(void *p, const std::string &file, const int _line, const std::string &func);
+  static void Remove(void *p);
+
+
+};
+
+#define INSERT_MEM_RECORD(p) \
+  CheckMemoryInfo::Insert(p, __FILE__, __LINE__, __FUNC)
